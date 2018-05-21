@@ -20,6 +20,7 @@ class Framework7 extends Framework7Class {
       id: 'io.framework7.testapp',
       root: 'body',
       theme: 'auto',
+      fallbackTheme: 'md',
       language: window.navigator.language,
       routes: [],
       name: 'Framework7',
@@ -54,7 +55,16 @@ class Framework7 extends Framework7Class {
       // Theme
       theme: (function getTheme() {
         if (app.params.theme === 'auto') {
-          return Device.ios ? 'ios' : 'md';
+          if (Device.windows) {
+            return 'win';
+          }
+          if (Device.ios) {
+            return 'ios';
+          }
+          if (Device.android) {
+            return 'md';
+          }
+          return app.params.fallbackTheme;
         }
         return app.params.theme;
       }()),

@@ -32,6 +32,9 @@ export default function () {
   if (Device.ios) {
     suffixes.push('ios');
   }
+  if (Device.windows) {
+    suffixes.push('win');
+  }
   // WP8 Touch Events Fix
   if (Browser.isIE && (Support.pointerEvents || Support.prefixedPointerEvents)) {
     suffixes.push(`wp8-${params.direction}`);

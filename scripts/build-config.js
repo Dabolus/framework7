@@ -159,6 +159,34 @@ const config = {
       */
     },
   },
+  win: {
+    themeColor: '#0078d7',
+    colors: {
+      red: '#e81123',
+      green: '#10893e',
+      blue: '#0078d7',
+      pink: '#ea005e',
+      yellow: '#ffb900',
+      orange: '#f7630c',
+      gray: '#767676',
+      white: '#ffffff',
+      black: '#000000',
+      /*
+      purple: '#9a0089',
+      deeppurple: '#881798',
+      indigo: '#0063b1',
+      lightblue: '#0099bc',
+      cyan: '#00b7c3',
+      teal: '#038387',
+      lightgreen: '#00cc6a',
+      lime: '#cddc39',
+      amber: '#ff8c00',
+      deeporange: '#da3b01',
+      brown: '#7e735f',
+      bluegray: '#68768a',
+      */
+    },
+  },
 };
 
 module.exports = config;
